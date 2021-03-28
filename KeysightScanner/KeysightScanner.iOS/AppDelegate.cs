@@ -23,6 +23,13 @@ namespace KeysightScanner.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            #region 3rd Party Library Initialization
+
+            ZXing.Net.Mobile.Forms.iOS.Platform.Init();
+
+            #endregion
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
